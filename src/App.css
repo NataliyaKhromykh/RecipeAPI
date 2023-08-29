@@ -1,38 +1,98 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+video{
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  left:0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 70%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2{
+  font-family: 'Architects Daughter', cursive;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+  font-size: 50px;
+}
+h2{
+  font-size: 18px;
+}
+button{
+  /* From https://css.glass */
+background: rgba(80, 194, 97, 0.34);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(80, 194, 97, 0.16);
+margin-top: 15px;
+width: 150px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container{
+display: flex;
+justify-content: center;
+}
+.search{
+  width: 300px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  box-shadow: inset 0px 0px 0px 4px rgba(80, 194, 97, 0.34);
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+.bigContainer{
+  display: flex;
+  flex-direction: column;
+}
+.list{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.recipeContainer{
+  display: flex;
+  justify-content: center;
+}
+.smallContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.expl{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  width: 400px;
 }
-
-.App-link {
-  color: #61dafb;
+.label{
+  background: rgba(254, 26, 89, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(254, 26, 89, 0.3);
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.showIngr{
+background: rgba(254, 243, 26, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(254, 243, 26, 0.3);
+font-size: 18px;
+font-family: 'Architects Daughter', cursive;
+width: 200px;
 }
