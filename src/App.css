@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 video{
   object-fit: cover;
   position: fixed;
@@ -95,8 +96,4 @@ border: 1px solid rgba(254, 243, 26, 0.3);
 font-size: 18px;
 font-family: 'Architects Daughter', cursive;
 width: 200px;
-}
-.somethingNew{
-display: flex;
-margin-top: 400px;
 }
