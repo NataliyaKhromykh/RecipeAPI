@@ -59,8 +59,8 @@ function App() {
         label={element.recipe.label} 
         image={element.recipe.image} 
         calories={element.recipe.calories} 
-        ingredients={element.recipe.ingredientLines}
-        link={element.recipe.url}/>
+        link={element.recipe.url}
+        ingredients={element.recipe.ingredientLines}/>
       )
       )}
 
