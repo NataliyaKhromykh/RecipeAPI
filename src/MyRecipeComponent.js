@@ -2,6 +2,13 @@ import { useState } from "react";
 function MyRecipeComponent({label, image, calories, ingredients, link}) {
     
     const [show, toggleShow] = useState(false);
+    const ingredientList = <ul className="container list">
+        {ingredients.map((ingredient, index) => (
+        <li key={index}>
+        {ingredient}
+        </li>
+        ))}
+    </ul>
 
 
 
@@ -14,7 +21,7 @@ function MyRecipeComponent({label, image, calories, ingredients, link}) {
             <p>{calories.toFixed()} calories</p>
             <a href={link} className="link">{link}</a>
             <button onClick={() => toggleShow(!show)} className="showIngr">{show ? "Hide ingredients" : "Show ingredients"}</button>
-            {show && <h2>Show ingredients</h2>}
+            {show && ingredientList}
             </div>
             </div>
 
@@ -27,6 +34,7 @@ function MyRecipeComponent({label, image, calories, ingredients, link}) {
                 ))}
             </ul>
         </div>
+        
         
 
 
