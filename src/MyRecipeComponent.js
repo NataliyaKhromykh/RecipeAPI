@@ -11,21 +11,17 @@ function MyRecipeComponent({label, image, calories, ingredients, link}) {
         <div className="expl">
             <h2 className="label">{label}</h2>
             <p>{calories.toFixed()} calories</p>
-            <a href={link} className="link">{link}</a>
+            <a href={link} className="link">{link.substring(0,30)}</a>
             <button onClick={() => toggleShow(!show)} className="showIngr">{show ? "Hide ingredients" : "Show ingredients"}</button>
-            {show && ingredients.map((ingredient, index) => ({ingredient}
-                ))
-                }
             </div>
             </div>
 {
             <ul className="container list">
-                {ingredients.map((ingredient, index) => (
-                    <li key={index}>
-                        {ingredient}
-                    </li>
-                    
-                ))}
+                {show && ingredients.map((ingredient, index) => 
+                <li>{ingredient}
+                </li>)
+                }
+                
             </ul> }
         </div>
         
